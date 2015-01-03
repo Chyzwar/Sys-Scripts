@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#I want to go "up" N directories, I can type up N:
+function up()
+{
+	LIMIT=$1
+	P=$PWD
+	for ((i=1; i <= LIMIT; i++))
+	do
+		P=$P/..
+	done
+	cd $P
+	export MPWD=$P
+}
+
+export -f up

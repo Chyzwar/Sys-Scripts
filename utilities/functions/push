@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#This will perform some magic on git :p
+function push(){
+		git add . && \
+		git add -u && \
+		git commit -m "$*" && \
+		git push origin master
+}
+
+
+export -f push
